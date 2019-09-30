@@ -4,7 +4,6 @@ h1	{ font-family: calibri; color: dimgray; font-size: 3em; }
 h2	{ font-family: calibri; color: dimgray; font-size: 1.5em; }
 h3	{ font-family: calibri; color: dimgray; font-size: 1.2em; }
 li 	{ font-family: calibri; color: dimgray; font-size: 1.2em; }
-nav	{ font-family: calibri; font-size: 1.2em; }
 
 a	{ 
 	font-family: calibri; 
@@ -16,6 +15,11 @@ a:hover:not(.active) {
 	color: white; 
 	background-color: gray; 
 }
+
+/* 
+* { border: 1px dashed red; }
+*/
+
 
 * {
 	box-sizing: border-box;
@@ -32,9 +36,10 @@ header {
 	
 }
 
-nav { 
-	margin-left: 20px;
-	padding: 10px; 
+nav {
+	font-size: 1.2em;
+	padding: 10px;
+	text-align: center;
 }
 
 nav a {
@@ -49,12 +54,11 @@ nav a {
 	cursor: default;
 }
 
-main { 
+main {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	justify-content: center;
-	padding: 10px; 
 }
 
 .item {
@@ -75,3 +79,16 @@ footer {
 	text-align: center;
 	padding: 20px;
 }
+
+
+/*-- RESPONSIVE --*/
+@media screen and (max-width: 700px) {
+	.item { width: 45%; }
+}
+
+@media screen and (max-width: 500px) {
+	.item { width: 90%; }
+	nav {margin: 10px; }
+	nav a { display: block; text-align: center; border: 2px solid lightgray; }
+}
+
